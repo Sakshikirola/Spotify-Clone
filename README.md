@@ -1,16 +1,99 @@
-# React + Vite
+# 🎧 Spotify Frontend Clone (React)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **Spotify-inspired frontend music player** built using **React**, **Context API**, **React Router**, and **Tailwind CSS**.
+This project focuses on UI, component architecture, global state management, and audio playback logic.
 
-Currently, two official plugins are available:
+> ⚠️ This is a **frontend-only clone** created for learning purposes. No real Spotify APIs are used.
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+* 🎵 Music playback using HTML5 `<audio>`
+* ⏯️ Play / Pause / Next / Previous controls
+* 📀 Album-wise song navigation
+* 📊 Seek bar with real-time progress update
+* 🌈 Dynamic background based on album
+* 🌍 Global player state using Context API
+* 🧭 Routing with React Router
+* 📱 Responsive UI (Tailwind CSS)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **React.js**
+* **React Router DOM**
+* **Context API**
+* **Tailwind CSS**
+* **JavaScript (ES6+)**
+
+---
+
+## 📂 Project Structure
+
+```
+src/
+├── assets/          # Images, songs & data files
+├── Components/      # Reusable UI components
+│   ├── AlbumItem.jsx
+│   ├── SongsItem.jsx
+│   ├── Navbar.jsx
+│   └── Player.jsx
+├── Context/
+│   └── PlayerContext.jsx
+├── Pages/
+│   ├── DisplayHome.jsx
+│   └── DisplayAlbum.jsx
+├── App.jsx
+├── main.jsx
+```
+
+---
+
+## 🧠 Key Concepts Learned
+
+* Component-based architecture
+* Props & state flow in React
+* Global state management using Context API
+* `useRef` for controlling audio and DOM elements
+* `useEffect` for side effects (time updates, UI sync)
+* Dynamic routing using `useParams` & `useNavigate`
+* Tailwind utility-first styling 
+
+---
+
+## ▶️ How Audio Player Works
+
+* `<audio>` element is controlled using `useRef`
+* Playback state is stored in Context
+* Song progress updates using `ontimeupdate`
+* Seek bar width updates dynamically
+* Clicking a song triggers playback via song ID
+
+## 📸 Screenshots
+---
+### Home Page
+![Home Page](./src/assets/image1.png)
+
+### Album Page
+![Album Page](./src/assets/image2.png) 
+
+---
+
+## 🙌 Acknowledgements
+
+This project was built as a **learning exercise** to better understand real-world React applications and frontend architecture.
+
+---
+
+## 👩‍💻 Author
+
+**Sakshi Kirola**
+Frontend Developer (Fresher)
+
+* GitHub: [https://github.com/Sakshikirola]
+* LinkedIn: [https://www.linkedin.com/in/sakshi-kirola-24797232b/]  
+
+---
+
+⭐ If you like this project, feel free to star the repository!
